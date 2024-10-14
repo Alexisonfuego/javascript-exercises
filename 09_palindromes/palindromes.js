@@ -1,11 +1,11 @@
-const palindromes = function (word) {
+const palindromes = function(word) {
     word = word.toLowerCase();
-    const array = word.split("");
-    const cleanedArray = array.filter(char => char.match(/[a-z0-9]/i));
-    const cleanedWord = cleanedArray.join("");
-    let reverseWord = cleanedArray.reverse().join("");
+    let array = word.split("").filter((char) => char.match(/[a-z0-9]/i));
+    let cleanedWord = array.join("");
+    let reverseWord = array.reverse().join("");
     return cleanedWord === reverseWord;
-}
+	}
+
 
 // Do not edit below this line
 module.exports = palindromes
